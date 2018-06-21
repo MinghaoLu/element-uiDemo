@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>评论</title>
+    <link rel=stylesheet href="css/comment.css">
+
+
+</head>
+<body>
+    <div class="commentArea">
+        <div class="commentInput">
+            <textarea name="inputComment" placeholder="请输入评论" rows="7" cols="20" autofocus="autofocus" v-model="comment">
+
+            </textarea>
+
+            <input type="button" name="" value="发送" class="btnInput" v-on:click="publish">
+        </div>
+
+        <div class="commentShow">
+            <div class="showComment" v-for="item in currentComments">
+                <div>
+                    <p class="comment" v-text="item.content">
+                        加载中...
+                    </p>
+                </div>
+
+                <div class="info">
+                    <span class="publisher" v-text="item.publisher">
+                    加载中...
+                </span>
+
+                <span class="createAt" v-text="item.created_at">
+                    加载中...
+                </span>
+                </div>
+            </div>
+
+            <el-pagination
+                layout="prev, pager, next"
+                :total="totalCount"
+                :page-size="pageSize"
+                v-on:current-change="handleCurrentChange">
+            </el-pagination>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://cdn.bootcss.com/vue-resource/1.5.1/vue-resource.min.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+    <!-- <script src="http://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js"></script> -->
+    <script src="js/comment.js"></script>
+</body>
+</html>

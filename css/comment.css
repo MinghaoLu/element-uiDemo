@@ -1,0 +1,44 @@
+/*
+* @Author: Marte
+* @Date:   2018-06-16 15:33:46
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-06-16 21:03:11
+*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.commentArea {
+    width: 800px;
+    margin-left: 100px;
+
+}
+
+.inputComment {
+
+}
+
+.showComment {
+    width: 500px;
+    margin-top: 5px;
+    border: 1px dotted black;
+}
+
+.comment {
+    width: 500px;
+    text-indent: 2em;
+}
+
+.info {
+    width: 100%;
+}
+
+.publisher {
+
+}
+
+.createAt {
+
+
+}
